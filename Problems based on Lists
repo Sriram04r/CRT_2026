@@ -1,0 +1,561 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOd3OSBblo2Vkuv/011VQnF",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Sriram04r/CRT_2026/blob/main/Problems%20based%20on%20Lists\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**TEST OESTION PAPER**"
+      ],
+      "metadata": {
+        "id": "TnHvxmWh1Dw8"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Write a recursive python function to count the total number of digits in a given number.\n"
+      ],
+      "metadata": {
+        "id": "bNZkD_Zr1Xhk"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def rec(n):\n",
+        "  if n == 0:\n",
+        "    return 0\n",
+        "  temp = n % 10\n",
+        "  rem = n // 10\n",
+        "  res = rec(rem)\n",
+        "  return res + 1\n",
+        "\n",
+        "a = rec(45678)\n",
+        "print(a)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-KCD4-Dq1S8n",
+        "outputId": "06381f1c-57cc-4bdb-e43c-693abfeed659"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Write a recursive python function to find the largest digit in a given number"
+      ],
+      "metadata": {
+        "id": "d6Ae-NEj7uIu"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def rec(n):\n",
+        "    if n == 0:\n",
+        "        return 0\n",
+        "    temp = n % 10\n",
+        "    rem = n // 10\n",
+        "    res = rec(rem)\n",
+        "    if temp > res:\n",
+        "        return temp\n",
+        "    else:\n",
+        "        return res\n",
+        "a = rec(24)\n",
+        "print(a)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PJ1pd8eC7I-X",
+        "outputId": "28b35e6b-f00e-41db-e28c-60e185def3e8"
+      },
+      "execution_count": 13,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "4\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Lists**"
+      ],
+      "metadata": {
+        "id": "FGbG1-_u-zHP"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "l = []\n",
+        "for i in range(0, n):\n",
+        "  elem = int(input())\n",
+        "  l.append(elem)\n",
+        "\n",
+        "print(l)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9flfj9jGFLkv",
+        "outputId": "dfb5a48d-63cb-41e3-e832-208ba3128d78"
+      },
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n",
+            "5\n",
+            "[1, 2, 3, 4, 5]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "s = '1 2 3 4 5'\n",
+        "arr =s.split(',')\n",
+        "print(arr)\n",
+        "\n",
+        "s = '1 2 3 4 5'\n",
+        "arr =s.split(' ')\n",
+        "print(arr)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "jRsu2gHhHZEB",
+        "outputId": "e70f20e8-545e-4bb2-aed4-90155ff035f0"
+      },
+      "execution_count": 42,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['1 2 3 4 5']\n",
+            "['1', '2', '3', '4', '5']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Insertion\n",
+        "\n",
+        "l = [1,2,3]\n",
+        "l.insert(1, 5)\n",
+        "print(l)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "TTYJQDatIoMS",
+        "outputId": "47d92bc0-d7eb-4343-93d3-b51c66aa63ca"
+      },
+      "execution_count": 25,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 5, 2, 3]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Delete(POP)\n",
+        "\n",
+        "l = [9,8,7,6]\n",
+        "l.pop()\n",
+        "print(l)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "CaDw2BcBI471",
+        "outputId": "53fda062-9f69-4ac9-fa84-3c7e5358b07e"
+      },
+      "execution_count": 27,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[9, 8, 7]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "l = [3,4,2,1]\n",
+        "l.remove(2)\n",
+        "print(l)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "74IL7ITmJNc3",
+        "outputId": "f7d67525-6695-4069-e167-86873976a998"
+      },
+      "execution_count": 28,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[3, 4, 1]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Update\n",
+        "\n",
+        "l = [4,3,2,5]\n",
+        "l[2] = 5\n",
+        "print(l)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "n7KY_jUeJfpw",
+        "outputId": "30fbc682-a9c6-489c-9237-8ccacac9106c"
+      },
+      "execution_count": 35,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[4, 3, 5, 5]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Traversing**"
+      ],
+      "metadata": {
+        "id": "MtCAE8smKDjE"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "l = [1,2,3,4]\n",
+        "for i in range(len(l) - 1):\n",
+        "  print(l[i])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5zxl8YaHKGen",
+        "outputId": "99aedf5a-0231-43c4-ae79-c7680bd69384"
+      },
+      "execution_count": 40,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "2\n",
+            "3\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "l = [8,9,7,3]\n",
+        "for i in l:\n",
+        "  print(i)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "vvFqEaZ2K4ZV",
+        "outputId": "0dca7308-3afe-45ce-e5d1-65ff5552c362"
+      },
+      "execution_count": 41,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "8\n",
+            "9\n",
+            "7\n",
+            "3\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "l = [5,3,8,2,0]\n",
+        "l[2] = 4\n",
+        "print(l)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5K8GgjyoMNGK",
+        "outputId": "0d81fec8-e865-4144-e6a0-479e4fc1b58a"
+      },
+      "execution_count": 45,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[5, 3, 4, 2, 0]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "l = [5,3,8,2,0]\n",
+        "temp = l[1]\n",
+        "l[1] = l[3]\n",
+        "l[3] = temp\n",
+        "\n",
+        "print(l)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dhsdClQCNZpz",
+        "outputId": "35ba0aac-6f08-4f6e-f7f2-6911edfc4675"
+      },
+      "execution_count": 50,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[5, 2, 8, 3, 0]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "l = [5,3,8,2,0]\n",
+        "temp = l[2]\n",
+        "l[2] = l[4]\n",
+        "l[4] = temp\n",
+        "print(l)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "wZbJq3fJOUye",
+        "outputId": "022f193d-fce3-4139-8b7b-721a3750cd5e"
+      },
+      "execution_count": 51,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[5, 3, 0, 2, 8]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "l = [5,3,8,2,0]\n",
+        "l.reverse()\n",
+        "print(l)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "NHzlX8_sP8BS",
+        "outputId": "08d55299-3c0b-412f-ab96-f3d552791c0a"
+      },
+      "execution_count": 52,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[0, 2, 8, 3, 5]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "l = [5,3,8,2,0]\n",
+        "for i in range(0, n // 2):\n",
+        "  temp = l[i]\n",
+        "  l[i] = l[n - 1 - i]\n",
+        "  l[n - 1 - i] = temp\n",
+        "print(l)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-dV48_VjQrfu",
+        "outputId": "ac2d2546-7f92-4878-8501-4425b00eff34"
+      },
+      "execution_count": 56,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[0, 2, 8, 3, 5]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "l = [1,2,3,4,5,6]\n",
+        "max = l[0]\n",
+        "n = len(l)\n",
+        "for i in range(1, n):\n",
+        "  if l[i] > max:\n",
+        "    max = l[i]\n",
+        "    break\n",
+        "print(max)\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "B5lBkWxTSOAa",
+        "outputId": "f51ea1dd-ed5e-4a00-b8b3-2c835efa1691"
+      },
+      "execution_count": 61,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "l = [1,4,3,4,1]\n",
+        "count= 0\n",
+        "n = len(l)\n",
+        "for i in range(0, n// 2):\n",
+        "  if l[i] != l[n - i - 1]:\n",
+        "    count += 1\n",
+        "if count == 0:\n",
+        "  print('Palinmdrome')\n",
+        "else:\n",
+        "  print('Not a palindrome')\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "T44oSeaTWaWk",
+        "outputId": "5c1079de-4e8d-4d0e-8a56-26412737653c"
+      },
+      "execution_count": 71,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Palinmdrome\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
