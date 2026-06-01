@@ -1,0 +1,487 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNKqNz8KLYeMVqYnDvI0hib",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Sriram04r/CRT_2026/blob/main/Test%20Problems%20Explanation\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**TEST QUESTIONS**"
+      ],
+      "metadata": {
+        "id": "ADoN1M6YJJAb"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Take a list contain numbers from 1 to N with one number missing.Find the missing number."
+      ],
+      "metadata": {
+        "id": "opZILzlOJJvX"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "l = [1,2,3,5]\n",
+        "n = len(l) + 1\n",
+        "for i in range(1, n + 1):\n",
+        "  if i not in l:\n",
+        "    print(i)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "rO4AmMa7Jhcx",
+        "outputId": "a7e009ca-b9b7-47d5-cb9a-e462cec8a150"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "4\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "l=[1,2,4,5]\n",
+        "n=len(l)+1\n",
+        "sum=0\n",
+        "for i in range(1,n+1):\n",
+        "    sum+=i\n",
+        "listSum=0\n",
+        "for i in l:\n",
+        "    listSum+=i\n",
+        "print(sum-listSum)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "gMGrfADrK25y",
+        "outputId": "bec10f7e-3d2f-4ff9-8066-d25c251f95a3"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "3\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "2.Take a list from the user and find the second largest number in the list."
+      ],
+      "metadata": {
+        "id": "4Fdv7yORLMNd"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "l = [4,8,12,14,13,6]\n",
+        "f = max(l[0], l[1])\n",
+        "s = min(l[0], l[1])\n",
+        "for i in range(2, len(l)):\n",
+        "  if l[i] > f:\n",
+        "    s = f\n",
+        "    f = l[i]\n",
+        "  elif l[i] > s:\n",
+        "    s = l[i]\n",
+        "print(s)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Z0rhyk6_K3Ps",
+        "outputId": "92a53357-4869-4eec-9454-7c6c806c9ddd"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "13\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "l = [1,2,3]\n",
+        "m = l.copy()\n",
+        "m.append(4)\n",
+        "print(l)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "BYMLuNZgUG1q",
+        "outputId": "e1fa2bdf-b430-4fd2-e97e-27832f49074f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 3]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = [[0] * 3] * 3\n",
+        "a[0][0] = 1\n",
+        "print(a)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tLI4B0XnUTB8",
+        "outputId": "fb1e0ee6-d7ae-4ddc-8faf-7af336bb533e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[1, 0, 0], [1, 0, 0], [1, 0, 0]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = [1,2,3]\n",
+        "print(a[10:])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "YPKATNeaWT2j",
+        "outputId": "15c424dc-1bb4-4f88-fbe6-7c2adec2d1b2"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = [1,2,3]\n",
+        "print(a[-5:])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "FiY3pjtXXEoW",
+        "outputId": "b6696972-dc54-4336-953e-93dcb6effb4f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 3]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = [[1,2], [3, 4]]\n",
+        "b = a.copy()\n",
+        "b[0][0] = 100\n",
+        "print(a)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "YQ38OnQ3Xtbx",
+        "outputId": "b8b6d331-2811-44c3-f345-69e642d82409"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[100, 2], [3, 4]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = [1,2,3]\n",
+        "a.insert(10, 100)\n",
+        "print(a)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Thry3cogY-jM",
+        "outputId": "90df4a4f-be0e-41ca-c2e0-6cb972962ee8"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 3, 100]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = [1,2,3]\n",
+        "a.remove(5)\n",
+        "print(a)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 176
+        },
+        "collapsed": true,
+        "id": "grLdigDQZJj2",
+        "outputId": "48e09b72-92b4-4e2c-ef6b-bcc411ffae54"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "ValueError",
+          "evalue": "list.remove(x): x not in list",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mValueError\u001b[0m                                Traceback (most recent call last)",
+            "\u001b[0;32m/tmp/ipykernel_1618/1127941646.py\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0ma\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;34m[\u001b[0m\u001b[0;36m1\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;36m2\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;36m3\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 2\u001b[0;31m \u001b[0ma\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mremove\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;36m5\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      3\u001b[0m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0ma\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mValueError\u001b[0m: list.remove(x): x not in list"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = [1,2,3]\n",
+        "print(a.pop(1))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "wmsRXeqIZhby",
+        "outputId": "102ab17b-4d54-49aa-edb7-02ff5c510309"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = [1,2,3]\n",
+        "print(a == [1,2,3])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "FNvm3CqTZsyM",
+        "outputId": "e022ef51-8675-49f6-dca7-8e66dfcbe059"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = [1,2,3]\n",
+        "b = [1,2,3]\n",
+        "print(a is b)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dnis-txVZ1OV",
+        "outputId": "e686c9bd-8387-4701-be95-0bf46402f5df"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "False\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = [1,2,3]\n",
+        "b = a\n",
+        "b = b + [4]\n",
+        "print(a)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "XY5OJdEEaqIN",
+        "outputId": "d5f69d3d-2f55-4f96-e8e1-9437ceee6686"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 3]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = [26,9,8,6,2,1]\n",
+        "for i in range(len(a) - 1):\n",
+        "  if a[i] > a[i + 1]:\n",
+        "    swap = a[i]\n",
+        "    a[i] = a[i + 1]\n",
+        "    a[i + 1] = swap\n",
+        "print(a)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "DQsAJ8pAdpKu",
+        "outputId": "91078888-cead-4a03-dcf7-f89d8b24a8b4"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[9, 8, 6, 2, 1, 26]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = [4,2,3,5,6,1]\n",
+        "n=len(a)\n",
+        "for i in range(0,n-1):\n",
+        "    if a[i]>a[i+1]:\n",
+        "        # i,i+1\n",
+        "        temp=a[i]\n",
+        "        a[i]=a[i+1]\n",
+        "        a[i+1]=temp\n",
+        "print(a)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "I8c8CvBwg3gv",
+        "outputId": "12a869e7-2226-42bc-ff7c-419e189887c0"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[2, 3, 4, 5, 1, 6]\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
