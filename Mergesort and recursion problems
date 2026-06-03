@@ -1,0 +1,189 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyP+yRFwktFyn9CytpiQN4eQ",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Sriram04r/CRT_2026/blob/main/Mergesort%20and%20recursion%20problems\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**MERGE SORT and DICTIONARY (03 - 06 - 2026)**\n"
+      ],
+      "metadata": {
+        "id": "pJgknaUHkZUm"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 3,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "cmu7Ly_ujlek",
+        "outputId": "1945fc8d-a25e-40f9-90f0-bd0847984320"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[3, 7, 8, 9]\n"
+          ]
+        }
+      ],
+      "source": [
+        "l = [1, 2,3 ,4]\n",
+        "l2 = [3,7,8,9]\n",
+        "for i in range(len(l)):\n",
+        "  l[i] = l2.pop(0)\n",
+        "print(l)\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def mergeSort(l,st,end):\n",
+        "    if st==end:\n",
+        "        return\n",
+        "    mid=(st+end)//2\n",
+        "    mergeSort(l,st,mid)\n",
+        "    mergeSort(l,mid+1,end)\n",
+        "    i=st\n",
+        "    j=mid+1\n",
+        "    l2=[]\n",
+        "    while i<=mid and j<=end:\n",
+        "        if l[i]<=l[j]:\n",
+        "            l2.append(l[i])\n",
+        "            i+=1\n",
+        "        else:\n",
+        "            l2.append(l[j])\n",
+        "            j+=1\n",
+        "    if i>mid:\n",
+        "        while j<=end:\n",
+        "            l2.append(l[j])\n",
+        "            j+=1\n",
+        "    elif j>end:\n",
+        "        while i<=mid:\n",
+        "            l2.append(l[i])\n",
+        "            i+=1\n",
+        "    for i in range(st,end+1):\n",
+        "        l[i]=l2.pop(0)\n",
+        "l=[2,8,1,4,9,8,2,6]\n",
+        "mergeSort(l,0,len(l)-1)\n",
+        "print(l)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WYPFR7Py1b52",
+        "outputId": "26119bd0-73d8-4a3c-b4d8-f23d7dedd3e4"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 2, 4, 6, 8, 8, 9]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def countEven(l,idx):\n",
+        "    if idx==len(l):\n",
+        "        return 0\n",
+        "    c=0\n",
+        "    if l[idx]%2!=0:\n",
+        "        c+=1\n",
+        "        res=countEven(l,idx+1)\n",
+        "        return c+res\n",
+        "    else:\n",
+        "        res=countEven(l,idx+1)\n",
+        "        return res\n",
+        "l=[4,5,1,6,2,4]\n",
+        "a=countEven(l,0)\n",
+        "print(a)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "KYgwsgKD_h3H",
+        "outputId": "f1999a3a-fac6-43b1-c371-58469ada9737"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def countEven(l,idx):\n",
+        "    if idx==len(l):\n",
+        "        return 0\n",
+        "    c=0\n",
+        "    if l[idx]%2==0:\n",
+        "        c+=1\n",
+        "        res=countEven(l,idx+1)\n",
+        "        return c+res\n",
+        "    else:\n",
+        "        res=countEven(l,idx+1)\n",
+        "        return res\n",
+        "l=[4,5,1,6,2,4]\n",
+        "a=countEven(l,0)\n",
+        "print(a)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "VG4SbKNzFSRB",
+        "outputId": "678df4c3-6ba9-4399-d572-fc07eb8c49c2"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "4\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
