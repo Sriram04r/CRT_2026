@@ -1,0 +1,619 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOKEW2/U+nvowM3M+KCgZVu",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Sriram04r/CRT_2026/blob/main/Dictionaries%20concept\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**DICTIONARIES - 04-06-2026**"
+      ],
+      "metadata": {
+        "id": "j6m1W7-ZuFZ2"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "There are mainly 4 steps to write the program.\n",
+        "\n",
+        "1. Initialization\n",
+        "2. Input and Output\n",
+        "3. Modification\n",
+        "4. Traversing"
+      ],
+      "metadata": {
+        "id": "DTyfWVeCffah"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**1.** **Initialization** - The initialization is nothing but the values are assigned to a variable."
+      ],
+      "metadata": {
+        "id": "xqbxMQanmXHe"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Example\n",
+        "\n",
+        "d = {\n",
+        "    'm1' : 98,\n",
+        "    'm2' : 88,\n",
+        "    'java' : 78\n",
+        "}\n",
+        "print(d)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Seq7JYLFm1_E",
+        "outputId": "7c8ef10e-6e39-4740-d7df-fb6f9da7e3e3"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'m1': 98, 'm2': 88, 'java': 78}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**2. Input and Output** - This means the input and initialization is same the output is coming whe the program is executed."
+      ],
+      "metadata": {
+        "id": "Y7MCDQLAnfeS"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**3, Modifications -** These are nothing but we can change the values or outputs through some specific metods.There are mainly 3 methods are there."
+      ],
+      "metadata": {
+        "id": "mxzCPDY0oDcm"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**3(1). Insertion** - We can insert the values through the dictionary."
+      ],
+      "metadata": {
+        "id": "1_273vLEohcI"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dict = {\n",
+        "\n",
+        "    0 : 1,\n",
+        "    1 : 4,\n",
+        "    2 : 3\n",
+        "\n",
+        "}\n",
+        "\n",
+        "print(dict)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "uza2q7Kxo0bP",
+        "outputId": "c54d3c16-12b9-4181-dc39-8b159c4820c9"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{0: 1, 1: 4, 2: 3}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dict = {\n",
+        "\n",
+        "    0 : 1,\n",
+        "    1 : 4,\n",
+        "    2 : 3\n",
+        "\n",
+        "}\n",
+        "dict[3] = 9\n",
+        "\n",
+        "print(dict)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "vZmQKp09pj0b",
+        "outputId": "d2995bf3-fb96-40cd-cd68-2108bf5cc7d7"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{0: 1, 1: 4, 2: 3, 3: 9}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Insertion\n",
+        "\n",
+        "d = {\n",
+        "    'M1' : 2,\n",
+        "    'M2' : 8,\n",
+        "    'M3' : 10\n",
+        "}\n",
+        "d['OS'] = 99\n",
+        "print(d)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "e3UDdvsWr830",
+        "outputId": "611157cc-d7f3-4e05-9f60-a59582681101"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'M1': 2, 'M2': 8, 'M3': 10, 'OS': 99}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**3(2). Deletion** - It delete the elements by pop() method."
+      ],
+      "metadata": {
+        "id": "1wqu-a6_p2o3"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dict = {\n",
+        "\n",
+        "    'sri' : 'Good',\n",
+        "    'Ram' : 'Very good',\n",
+        "    'Ramsri' : 'Excellent',\n",
+        "    'Ghost' : 'Bad'\n",
+        "\n",
+        "}\n",
+        "dict.pop('Ghost')\n",
+        "\n",
+        "print(dict)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "cA7GSHKVqG9f",
+        "outputId": "0178b27c-b474-4520-8b9c-c30db529e1c3"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'sri': 'Good', 'Ram': 'Very good', 'Ramsri': 'Excellent'}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**3(3). Traversing** - Mainly in this method there are 3 sub features are there which are Key traversal, value traversal and kay-values traversal."
+      ],
+      "metadata": {
+        "id": "p1ZQoN-CrfNq"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 18,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "I6sSoKFqtvDI",
+        "outputId": "71aa167e-d2d0-4f50-ff02-0f57eef5435c"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{0: 2, 1: 8, 3: 10}\n",
+            "0\n",
+            "1\n",
+            "3\n"
+          ]
+        }
+      ],
+      "source": [
+        "d = {\n",
+        "    0 : 2,\n",
+        "    1 : 8,\n",
+        "    3 : 10\n",
+        "}\n",
+        "print(d)\n",
+        "for key in d.keys():\n",
+        "  print(key)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "a95t0VffsAsV"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "d = {\n",
+        "    0 : 2,\n",
+        "    1 : 8,\n",
+        "    3 : 10\n",
+        "}\n",
+        "print(d)\n",
+        "for key in d.values():\n",
+        "  print(key)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "GOuUcEUWsAYy",
+        "outputId": "16d3299f-dce1-4899-871d-b53444607e49"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{0: 2, 1: 8, 3: 10}\n",
+            "2\n",
+            "8\n",
+            "10\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "d = {\n",
+        "    0 : 2,\n",
+        "    1 : 8,\n",
+        "    3 : 10\n",
+        "}\n",
+        "print(d)\n",
+        "for key in d.items():\n",
+        "  print(key)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "fHdNyTaJsKLn",
+        "outputId": "b0ca76ca-8cb2-4cff-8cf4-99918b8d1ed4"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{0: 2, 1: 8, 3: 10}\n",
+            "(0, 2)\n",
+            "(1, 8)\n",
+            "(3, 10)\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Question1**\n",
+        "\n",
+        "**step1**:create empty dictionary\n",
+        "\n",
+        "**step2**:add subject with respective marks\n",
+        "\n",
+        "**M1**-90\n",
+        "\n",
+        "**M2**-85\n",
+        "\n",
+        "**os**-80\n",
+        "\n",
+        "**python**-87\n",
+        "\n",
+        "**java**-82\n",
+        "\n",
+        "**CN**-91\n",
+        "\n",
+        "**Step3**-update CN marks-80\n",
+        "\n",
+        "**Step4**-delete java subject\n",
+        "\n",
+        "**step5**-print all the subject and markss with Format\n",
+        "\n",
+        "\"subject : marks\""
+      ],
+      "metadata": {
+        "id": "IKQCNekM3wR4"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "9E3NwA-C3wGd"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dict = {}\n",
+        "\n",
+        "dict['M1'] = 90,\n",
+        "dict['M2'] = 85,\n",
+        "dict['OS'] = 80,\n",
+        "dict['python'] = 7,\n",
+        "dict['java'] = 82,\n",
+        "dict['CN'] = 91,\n",
+        "dict['CN'] = 80,\n",
+        "dict.pop('java')\n",
+        "\n",
+        "\n",
+        "print(dict)\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9ZKx6zZX3eag",
+        "outputId": "0e2ca12f-ae81-4c78-a81a-0125587f8d5f"
+      },
+      "execution_count": 19,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'M1': (90,), 'M2': (85,), 'OS': (80,), 'python': (7,), 'CN': (80,)}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Question 2**\n",
+        "\n",
+        "**Step1**-Store subject names in a dictionary as per above Subject data\n",
+        "\n",
+        "**Step2**-ask to user \"Enter subject name\"\n",
+        "\n",
+        "**Step3**-if subject exist print marks in format \"Subject:Marks\"\n",
+        "\n",
+        "**Step4**-if subject not exist print \"Subject doeesnt exist\""
+      ],
+      "metadata": {
+        "id": "2PX2bTwV95BP"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "dict = {\n",
+        "    'M1' : 90,\n",
+        "    'M2' : 85,\n",
+        "    'OS' : 80,\n",
+        "    'python': 7,\n",
+        "    'java' : 82,\n",
+        "    'CN' : 91\n",
+        "\n",
+        "}\n",
+        "user = input('Enter a subject name:')\n",
+        "\n",
+        "if user in dict:\n",
+        "    print('The subject marks is:', dict[user])\n",
+        "else:\n",
+        "    print(\"subjects not exists\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "fRMKLIEn9bt-",
+        "outputId": "48645d18-c411-405e-f9fb-79165bfbaf2c"
+      },
+      "execution_count": 21,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a subject name:CN\n",
+            "The subject marks is: 91\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Q3. High frequency comes output\n"
+      ],
+      "metadata": {
+        "id": "BA13Ho82LvC1"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "l = [1,2,3,2,4,5,6,6,7,7]\n",
+        "d = {}\n",
+        "for i in l:\n",
+        "  if i in d:\n",
+        "      d[i] = d[i] + 1\n",
+        "  else:\n",
+        "      d[i] = 1\n",
+        "for key,value in d.items():\n",
+        "    if value > 1:\n",
+        "        print(key, end = ' ')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "RU4eWnHeCign",
+        "outputId": "c221bb69-aecb-4455-e391-d3f87bbb2cf1"
+      },
+      "execution_count": 28,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2 6 7 "
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "l = 'Science'\n",
+        "d = {}\n",
+        "for i in l:\n",
+        "  if i in d:\n",
+        "      d[i] = d[i] + 1\n",
+        "  else:\n",
+        "      d[i] = 1\n",
+        "print(d)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "GLfuzSqqMN5E",
+        "outputId": "9689ea38-4978-4b24-a37a-46ba1e30eeb5"
+      },
+      "execution_count": 33,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'S': 1, 'c': 2, 'i': 1, 'e': 2, 'n': 1}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "s1=\"secure\"\n",
+        "s2=\"rescued\"\n",
+        "flag=True\n",
+        "d={}\n",
+        "for i in s1:\n",
+        "    if i in d:\n",
+        "        d[i]+=1\n",
+        "    else:\n",
+        "        d[i]=1\n",
+        "for key in s2:\n",
+        "    if key in d:\n",
+        "        d[key]=d[key]-1\n",
+        "        if d[key]==0:\n",
+        "            d.pop(key)\n",
+        "    else:\n",
+        "        flag=False\n",
+        "        break\n",
+        "if  flag==True:\n",
+        "    print(\"Anagram\")\n",
+        "else:\n",
+        "    print(\"Not Anagram\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "GyEHC3b2PONp",
+        "outputId": "085218c3-a3ae-4aa4-984d-3cfb2d198e03"
+      },
+      "execution_count": 41,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Not Anagram\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
