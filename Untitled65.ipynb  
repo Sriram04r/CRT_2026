@@ -1,0 +1,222 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOygaWfCD5pj+L9bvK1HzzK",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Sriram04r/CRT_2026/blob/main/Untitled65.ipynb%20%20\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "1.Find the key with minimum valuue"
+      ],
+      "metadata": {
+        "id": "auYGUU4tGqw9"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "KDAo3KTfFJTL",
+        "outputId": "9e94ea70-92c2-494f-94ad-792c91269f5a"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "a\n",
+            "a\n",
+            "c\n",
+            "c\n"
+          ]
+        }
+      ],
+      "source": [
+        "d = {\n",
+        "    'a' : 10,\n",
+        "    'b' : 50,\n",
+        "    'c' : 5,\n",
+        "    'd' : 30\n",
+        "}\n",
+        "min = 1000\n",
+        "min_char = ''\n",
+        "for k,v in d.items():\n",
+        "  if v < min:\n",
+        "    min = v\n",
+        "    min_char = k\n",
+        "  print(min_char)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "2. Find frequency of values"
+      ],
+      "metadata": {
+        "id": "y6biaLaXJWOn"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "d = {\n",
+        "    'a' : 10,\n",
+        "    'b' : 50,\n",
+        "    'c' : 10,\n",
+        "    'd' : 10\n",
+        "}\n",
+        "d1 = {}\n",
+        "for v in d.values():\n",
+        "  if v not in d1:\n",
+        "    d1[v] = 1\n",
+        "  else:\n",
+        "    d1[v] += 1\n",
+        "print(d1)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "r3zgrj1uJZlB",
+        "outputId": "adf51f37-c667-43a7-a858-d2baa689fd01"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{10: 3, 50: 1}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "3. Create reverse dictionary"
+      ],
+      "metadata": {
+        "id": "GZHqVztNKlE2"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "d = {\n",
+        "    'a' : 10,\n",
+        "    'b' : 50,\n",
+        "    'c' : 5,\n",
+        "    'd' : 30\n",
+        "}\n",
+        "d1 = {}\n",
+        "for k,v in d.items():\n",
+        "  d1[v] = k\n",
+        "print(d1)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "DZyG1SpCKoG6",
+        "outputId": "18641f62-70ba-4812-d278-5c05a1984683"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{10: 'a', 50: 'b', 5: 'c', 30: 'd'}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Srings and Hashmap Questions**"
+      ],
+      "metadata": {
+        "id": "M9ONIqdNL38V"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "1. Find the First character with frequency 1."
+      ],
+      "metadata": {
+        "id": "HH63qhU_L9nS"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = 'aabbcde'\n",
+        "d = {}\n",
+        "\n",
+        "for i in a:\n",
+        "    if i in d:\n",
+        "        d[i] += 1\n",
+        "    else:\n",
+        "        d[i] = 1\n",
+        "\n",
+        "res = ''\n",
+        "for i in a:\n",
+        "    if d[i] == 1:\n",
+        "        res = i\n",
+        "        break\n",
+        "\n",
+        "if res == '':\n",
+        "    print('No unique character found')\n",
+        "else:\n",
+        "    print(res)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "collapsed": true,
+        "id": "kUGMjQSKNCzc",
+        "outputId": "ef5fb76c-29b2-4001-a9b0-933f034455bb"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "c\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
