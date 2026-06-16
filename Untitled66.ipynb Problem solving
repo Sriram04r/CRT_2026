@@ -1,0 +1,490 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMsW2ovzRDUkf3i4ssylIDr",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Sriram04r/CRT_2026/blob/main/Untitled66.ipynb%20Problem%20solving\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**PROBLEM SOLVING  - (15-06-2026)**"
+      ],
+      "metadata": {
+        "id": "QtwR1dvCXiCu"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "1. Print 1 to 10 numbers using Recurssion"
+      ],
+      "metadata": {
+        "id": "8yTS9T0JZaVt"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ZXgm1x8gXhBq",
+        "outputId": "f86d9c5d-9346-4ff9-d744-a914d620f0bd"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n",
+            "5\n",
+            "6\n",
+            "7\n",
+            "8\n",
+            "9\n",
+            "10\n"
+          ]
+        }
+      ],
+      "source": [
+        "def recFun(n):\n",
+        "  for i in range(1, n +1):\n",
+        "    print(i)\n",
+        "recFun(10)\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "2. Print sum of numbers using recurssion."
+      ],
+      "metadata": {
+        "id": "wtN25mOgbHCO"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def sum(n):\n",
+        "  if n == 0:\n",
+        "    return 0\n",
+        "  return n + sum(n - 1)\n",
+        "\n",
+        "sum(15)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-xvSB0DybNA3",
+        "outputId": "8bc92f65-ca4f-4eca-dc49-c3354bf879fa"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "120"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 6
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "3. Linear search"
+      ],
+      "metadata": {
+        "id": "n7cUJPCocEk2"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def lst(list, key, idx):\n",
+        "  if idx >= len(data_list):\n",
+        "    return -1\n",
+        "\n",
+        "  if list[idx] == key:\n",
+        "    return idx\n",
+        "  else:\n",
+        "\n",
+        "    res = lst(list, key, idx + 1)\n",
+        "    return res\n",
+        "\n",
+        "list = [2,3,4,5,6]\n",
+        "key = 4\n",
+        "idx = 0\n",
+        "\n",
+        "\n",
+        "result_index = lst(data_list, key, idx)\n",
+        "print(result_index)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2Dfy-DytcHNM",
+        "outputId": "4747fefa-435d-4e4b-aa68-20d7e7915ef1"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "4. Binary Search"
+      ],
+      "metadata": {
+        "id": "Y8M_8W3Hewrs"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def bs(data_list, key, i, j):\n",
+        "  if i > j:\n",
+        "    return -1\n",
+        "\n",
+        "  mid = (i + j) // 2\n",
+        "  if data_list[mid] == key:\n",
+        "    return mid\n",
+        "  elif data_list[mid] > key:\n",
+        "    return bs(data_list, key, i, mid - 1)\n",
+        "  else:\n",
+        "    return bs(data_list, key, mid + 1, j)\n",
+        "\n",
+        "unsorted_list = [1,4,7,9,3]\n",
+        "\n",
+        "data_list = sorted(unsorted_list)\n",
+        "print(f\"Sorted list: {data_list}\")\n",
+        "\n",
+        "key = 3\n",
+        "\n",
+        "res_sorted_index = bs(data_list, key, 0, len(data_list) - 1)\n",
+        "\n",
+        "if res_sorted_index != -1:\n",
+        "  original_index = unsorted_list.index(key)\n",
+        "  print(f\"Key {key} found at original index: {original_index}\")\n",
+        "else:\n",
+        "  print(f\"Key {key} not found in the list.\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "e853uJDzeyq3",
+        "outputId": "44c4f32a-8e07-46dd-8b41-b15c224291c7"
+      },
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Sorted list: [1, 3, 4, 7, 9]\n",
+            "Key 3 found at original index: 4\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "5. Method Overriding"
+      ],
+      "metadata": {
+        "id": "45_Mdpjwgt9e"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class cv1:\n",
+        "  def engineOn(self):\n",
+        "    print('Engine turned On')\n",
+        "  def accleration(self):\n",
+        "    print('Accelearting')\n",
+        "class cv2(cv1):\n",
+        "  def engineOn(self):\n",
+        "    print('2nd Engine version turned On')\n",
+        "car = cv2()\n",
+        "car.engineOn()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-MrCehH1gwu1",
+        "outputId": "baf13b24-de39-405f-c812-0bbac89dbd81"
+      },
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2nd Engine version turned On\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "6. Method Overloading"
+      ],
+      "metadata": {
+        "id": "UlR5fqeqh812"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class calci:\n",
+        "  def summ(self, a, b):\n",
+        "    print(a + b)\n",
+        "  def summ(self, a, b, c):\n",
+        "    print(a + b + c)\n",
+        "  def summ(self, a, b, c, d):\n",
+        "    print(a + b + c + d)\n",
+        "calculator = calci()\n",
+        "calculator.summ(1,2, 3, 4)\n",
+        ""
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "DKcSCQ6Ph_rZ",
+        "outputId": "00e58682-4066-4aac-a848-52e34d3101a7"
+      },
+      "execution_count": 21,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "10\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "7. Abstract method"
+      ],
+      "metadata": {
+        "id": "Q7bgtQH0kKL_"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from abc import ABC, abstractmethod\n",
+        "class carAb(ABC):\n",
+        "  @abstractmethod\n",
+        "  def engineOn(self):\n",
+        "    pass\n",
+        "  @abstractmethod\n",
+        "  def brake(self):\n",
+        "    pass\n",
+        "class car(carAb):\n",
+        "  def engineOn(self):\n",
+        "    print('Engine turned On...')\n",
+        "  def brake(self):\n",
+        "    print('The brake is enabled')\n",
+        "Ford = car()\n",
+        "Ford.brake()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Kysbw7KUlZE9",
+        "outputId": "0847214e-5e06-4304-f90f-7a8d046634b0"
+      },
+      "execution_count": 22,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "The brake is enabled\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**LEET CODE PROBLEMS**"
+      ],
+      "metadata": {
+        "id": "qH5okon49Z08"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "1. Take a two strings and check the strings are anagram or not if it is anagram print true or else false"
+      ],
+      "metadata": {
+        "id": "gUVQNM1d9eWh"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def is_anagram(s, t):\n",
+        "    s2 = sorted(s)\n",
+        "    t2 = sorted(t)\n",
+        "    if s2 == t2:\n",
+        "        return True\n",
+        "    else:\n",
+        "        return False\n",
+        "s = 'listen'\n",
+        "t = 'silent'\n",
+        "res = is_anagram(s, t)\n",
+        "print(res)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "fE7y-W8r9r9G",
+        "outputId": "5ffa4a57-357b-47fc-dda4-b23c3709e4c6"
+      },
+      "execution_count": 24,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class solution:\n",
+        "    def is_anagram(self, s, t):\n",
+        "        s2 = sorted(s)\n",
+        "        t2 = sorted(t)\n",
+        "        if s2 == t2:\n",
+        "          return True\n",
+        "        else:\n",
+        "          return False\n",
+        "obj = solution()\n",
+        "s = 'listen'\n",
+        "t = 'silent'\n",
+        "res = obj.is_anagram(s, t)\n",
+        "print(res)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "j2IOxb4R90bx",
+        "outputId": "a9d25baa-aa14-428c-f4ee-b21996279698"
+      },
+      "execution_count": 26,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "2. Binary search in leetcode\n"
+      ],
+      "metadata": {
+        "id": "RjpGTDDB9tqE"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def bs(list, target, i, j):\n",
+        "    if i > j:\n",
+        "        return -1\n",
+        "    mid = (i + j) // 2\n",
+        "    if list[mid] == target:\n",
+        "        return mid\n",
+        "    elif list[mid] > target:\n",
+        "        return bs(list, target, i, mid - 1)\n",
+        "    else:\n",
+        "        return bs(list, target, mid + 1, j)\n",
+        "\n",
+        "list = [2, 4, 5, 7, 9]\n",
+        "target = 9\n",
+        "res = bs(list, target, 0, len(list) - 1)\n",
+        "print(res)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3B2tZf1u7g_s",
+        "outputId": "52965472-d43f-4a4d-e480-a738707f9fec"
+      },
+      "execution_count": 28,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "4\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
